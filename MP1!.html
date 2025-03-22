@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website :D</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+<body>
+
+    <header>
+       <h1 id="floatingTitle">
+    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span> 
+    <span>t</span><span>o</span> 
+    <span>M</span><span>y</span> 
+    <span>S</span><span>i</span><span>t</span><span>e</span>! </h1>
+        <nav>
+    <ul>
+        <li><a href="#home">About me!</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+    
+    <section id="home">
+    <h2>About me! </h2>
+		<p>Hi, I'm Steph! ✨  </p>
+		<p>I'm a sophomore student at Western Illinois University and an aspiring writer!✨ </p>  
+	<p> When I’m not writing, you can find me playing FPS games like Call of Duty and Valorant, watching anime, scrolling through TikTok, or crocheting cute plushies for my guinea pig, Hamilton!</p>
+		<img src="IMG_20200702_172331728.jpg" alt="Hamilton" width="200">
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <p>Here are some cool pieces I've been working on for my classes!(And some crocheting projects too😉) </p>
+	   <select id="pdfSelector">
+           <option value="fiction.pdf" data-type="pdf">📖 Fiction Short Story</option>
+    <option value="essay.pdf" data-type="pdf">📝 Essay</option>
+    <option value="poem.pdf" data-type="pdf">🌸 Poem 1</option>
+    <option value="poem2.pdf" data-type="pdf">🌸 Poem 2</option>
+		   /* the next four are the crochet projjects :D */
+		<option value="IMG_20250321_174704.jpg" data-type="image">🐰 Bunny Plushie</option> 
+    <option value="IMG-20230206-WA0001.jpg" data-type="image">⛄ Snowman Plushie</option>
+    <option value="IMG-20240530-WA0001.jpg" data-type="image">🐝 Bee Plushie</option>
+    <option value="IMG-20241007-WA0012.jpg" data-type="image">🐣 Chicken Plushies</option>
+    </select>
+	
+  	<div class="viewer-container">
+    <iframe id="pdfViewer" src="fiction.pdf"></iframe>
+    <img id="imageViewer" src="IMG_20250321_174704.jpg" style="display: none;">
+	</div>
+	
+</section>
+
+<section id="contact">
+    <h2>Find Me!</h2>
+    <p>📷 Find me on Instagram! 
+        <a href="https://www.instagram.com/StephyBend_uwu" class="insta-link" target="_blank">@StephyBend_uwu</a>
+	</p>
+	 <p>📧 Or shoot me an email at: 
+          <a href="mailto:stephanie.etapol@gmail.com?subject=Hello%20Steph!&body=I%20love%20your%20website!%20it's%20very%20cute!" class="insta-link">Stephanie.etapol@gmail.com</a>
+</p>
+	<p>🎵 You can also find me on Spotify! 
+		<a href="https://open.spotify.com/user/i2zg3nkwxpywdwq0fdhjfd12z?si=yDUmdRfXTWibM_S4UrCEOw" class="insta-link">@Steph</a>
+	</p>
+	
+</section>
+	
+	<div id="spotifyPlayer">
+    <iframe 
+        src="https://open.spotify.com/embed/track/508hRxbxwagYO0OmQRv2pX?utm_source=generator&theme=0" 
+        width="275" 
+        height="80" 
+        frameborder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+</div>
+	
+    <footer>
+        <p>© 2025 Stephanie Bendeck Román. All rights reserved.</p>
+    </footer>
+	
+	<script>
+    document.getElementById("pdfSelector").addEventListener("change", function() {
+        document.getElementById("pdfViewer").src = this.value;
+    });
+</script>
+	<script src="javascript!!.js"></script>
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("scroll", function() {
+            let footer = document.querySelector("footer");
+            if (window.scrollY > 100) { /* If scrolled down a little
+                footer.classList.add("show"); /* Shows the footer (I hope)
+            } else {
+                footer.classList.remove("show"); /* Hides the footer (hopefully)
+            }
+        });
+    });
+</script>
+
+</body></html>
